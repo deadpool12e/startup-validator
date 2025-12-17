@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 
 from langchain_groq import ChatGroq
-from langchain.agents import AgentExecutor
+from langchain.agents.agent import AgentExecutor
 from langchain.agents.tool_calling import create_tool_calling_agent
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.tools import tool
@@ -156,4 +156,5 @@ Market Info: {market_info or 'None provided'}
 # ---------------- ENTRY POINT ----------------
 if __name__ == "__main__":
     main()
+
 
