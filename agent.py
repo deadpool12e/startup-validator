@@ -1,12 +1,13 @@
 import streamlit as st
 import os
 from dotenv import load_dotenv
+
 from langchain_groq import ChatGroq
-from langchain.agents import create_tool_calling_agent, AgentExecutor
+from langchain.agents import AgentExecutor
+from langchain.agents.tool_calling import create_tool_calling_agent
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.tools import tool
 from langchain_community.tools.tavily_search import TavilySearchResults
-
 
 def main():
     # ---------------- LOAD ENV ----------------
@@ -155,3 +156,4 @@ Market Info: {market_info or 'None provided'}
 # ---------------- ENTRY POINT ----------------
 if __name__ == "__main__":
     main()
+
